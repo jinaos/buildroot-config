@@ -1,0 +1,2 @@
+%jinaos ALL=(ALL) NOPASSWD: /usr/bin/jpm
+%jinaos ALL=(ALL) NOPASSWD: /usr/bin/apk
