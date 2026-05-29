@@ -1,0 +1,10 @@
+config BR2_PACKAGE_JPM
+	bool "jpm"
+	help
+	  JinaOS Package Manager with resumable downloads
+
+config BR2_PACKAGE_JPM_RESUME_CACHE
+	string "Download cache directory"
+	default "/var/cache/jpm"
+	help
+	  Where jpm stores downloaded packages
