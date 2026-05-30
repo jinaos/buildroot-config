@@ -1,0 +1,13 @@
+[package]
+name = "gesture-daemon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+evdev = "0.12"
+nix = "0.26"
+libc = "0.2"
+
+[[bin]]
+name = "gesture-daemon"
+path = "src/main.rs"
