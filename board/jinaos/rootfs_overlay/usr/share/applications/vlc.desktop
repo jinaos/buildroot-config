@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=VLC Media Player
+Comment=Play videos and music
+Exec=/usr/bin/vlc
+Icon=vlc
+Terminal=false
+Categories=AudioVideo;Player;
+StartupNotify=true
