@@ -2,7 +2,7 @@
 Type=Application
 Name=Code Editor
 Comment=Write and edit code
-Exec=/usr/bin/gedit
+Exec=/usr/bin/geany
 Icon=accessories-text-editor
 Terminal=false
 Categories=Development;TextEditor;
