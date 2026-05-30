@@ -18,5 +18,8 @@ chmod 440 ${TARGET_DIR}/etc/sudoers.d/jinaos
 
 # Create runtime directory for Wayland
 mkdir -p ${TARGET_DIR}/tmp/runtime-jinaos
+# Compile C settings app
+cd ${BR2_EXTERNAL}/board/jinaos/src
+./build-settings.sh
 
 exit 0
