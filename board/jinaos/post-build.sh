@@ -21,5 +21,6 @@ mkdir -p ${TARGET_DIR}/tmp/runtime-jinaos
 # Compile C settings app
 cd ${BR2_EXTERNAL}/board/jinaos/src
 ./build-settings.sh
+chmod +x ${TARGET_DIR}/etc/init.d/S55swaync
 
 exit 0
