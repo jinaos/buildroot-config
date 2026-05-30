@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Flashlight for JinaOS
+# Controls camera LED/torch
+
+FLASH_DEVICES="/sys/class/leds/torch/brightness /sys/class/leds/led:torch_0/brightness /sys/class/leds/flashlight/brightness"
+
+find_flash_device() {
+    for dev in $FLASH_DEVICES; do
+        if [ -f "$dev" ]; then
+            echo "$dev"
+            return 0
+        fi
+    done
+    return 1
+}
+
+FLASH_DEVICE=$(find_flash_device)
+
+if [ -z "$FLASH_DEVICE" ]; then
+    echo "Error: Flashlight not found"
+    exit 1
+fi
+
+CURRENT=$(cat "$FLASH_DEVICE")
+
+if [ "$CURRENT" -eq 0 ]; then
+    echo 255 > "$FLASH_DEVICE"
+    echo "Flashlight ON"
+else
+    echo 0 > "$FLASH_DEVICE"
+    echo "Flashlight OFF"
+fi
