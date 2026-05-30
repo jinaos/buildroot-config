@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Flashlight
+Comment=Use camera LED as torch
+Exec=/usr/bin/flashlight
+Icon=flashlight
+Terminal=false
+Categories=Utility;
+StartupNotify=true
