@@ -23,4 +23,11 @@ cd ${BR2_EXTERNAL}/board/jinaos/src
 ./build-settings.sh
 chmod +x ${TARGET_DIR}/etc/init.d/S55swaync
 
+# Build gesture daemon
+cd ${BR2_EXTERNAL}/board/jinaos/src
+./build-gesture.sh
+
+# Copy init script
+chmod +x ${TARGET_DIR}/etc/init.d/S60gesture
+
 exit 0
