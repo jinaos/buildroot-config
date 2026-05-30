@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Music
+Comment=Listen to music
+Exec=/usr/bin/audacious
+Icon=audacious
+Terminal=false
+Categories=Audio;Music;
+StartupNotify=true
