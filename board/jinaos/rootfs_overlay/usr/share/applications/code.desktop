@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Code Editor
+Comment=Write and edit code
+Exec=/usr/bin/gedit
+Icon=accessories-text-editor
+Terminal=false
+Categories=Development;TextEditor;
+StartupNotify=true
