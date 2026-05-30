@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Calculator
+Comment=Perform calculations
+Exec=/usr/bin/gnome-calculator
+Icon=accessories-calculator
+Terminal=false
+Categories=Utility;Calculator;
+StartupNotify=true
