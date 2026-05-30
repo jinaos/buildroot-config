@@ -1,0 +1,32 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Starting Sway Notification Center"
+        /usr/bin/swaync &
+        ;;
+    stop)
+        echo "Stopping Sway Notification Center"
+        killall swaync
+        ;;
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+    status)
+        if pgrep -x "swaync" > /dev/null; then
+            echo "SwayNC is running"
+            exit 0
+        else
+            echo "SwayNC is stopped"
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
+esac
+
+exit 0
