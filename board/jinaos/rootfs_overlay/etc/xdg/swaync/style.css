@@ -1,0 +1,44 @@
+.control-center {
+    background-color: rgba(30, 30, 35, 0.95);
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.control-center .title {
+    font-size: 1.5em;
+    color: #2e7d32;
+    padding: 10px;
+}
+
+.widget-buttons-grid {
+    padding: 10px;
+}
+
+.widget-buttons-grid > .widget-button {
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.widget-buttons-grid > .widget-button:hover {
+    background-color: #1b5e20;
+}
+
+.notification {
+    background-color: #2a2a2e;
+    border-radius: 10px;
+    margin: 5px 10px;
+    padding: 10px;
+}
+
+.notification .summary {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.notification .body {
+    color: #e0e0e0;
+    margin-top: 5px;
+}
