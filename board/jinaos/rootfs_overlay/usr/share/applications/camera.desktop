@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Camera
+Comment=Take photos and videos
+Exec=/usr/bin/cheese
+Icon=camera
+Terminal=false
+Categories=Graphics;Photography;
+StartupNotify=true
