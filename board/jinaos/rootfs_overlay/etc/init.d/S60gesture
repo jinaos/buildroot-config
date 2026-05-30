@@ -1,0 +1,34 @@
+#!/bin/sh
+
+DAEMON=/usr/bin/gesture-daemon
+
+case "$1" in
+    start)
+        echo "Starting JinaOS gesture daemon"
+        start-stop-daemon -S -q -b --exec $DAEMON
+        ;;
+    stop)
+        echo "Stopping JinaOS gesture daemon"
+        start-stop-daemon -K -q --exec $DAEMON
+        ;;
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+    status)
+        if pgrep -x "gesture-daemon" > /dev/null; then
+            echo "Gesture daemon is running"
+            exit 0
+        else
+            echo "Gesture daemon is stopped"
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
+esac
+
+exit 0
