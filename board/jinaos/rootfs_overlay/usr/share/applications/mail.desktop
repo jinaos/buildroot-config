@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Mail
+Comment=Email client
+Exec=/usr/bin/claws-mail
+Icon=claws-mail
+Terminal=false
+Categories=Network;Email;
+StartupNotify=true
