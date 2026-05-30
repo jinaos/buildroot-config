@@ -1,0 +1,17 @@
+#!/bin/sh
+case "$1" in
+    start)
+        echo "Starting ModemManager"
+        start-stop-daemon -S -q -b --exec /usr/sbin/ModemManager
+        ;;
+    stop)
+        echo "Stopping ModemManager"
+        start-stop-daemon -K -q --exec /usr/sbin/ModemManager
+        ;;
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+esac
+exit 0
