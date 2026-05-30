@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Text Editor
+Comment=Edit text files
+Exec=/usr/bin/gedit
+Icon=accessories-text-editor
+Terminal=false
+Categories=Utility;TextEditor;
+StartupNotify=true
