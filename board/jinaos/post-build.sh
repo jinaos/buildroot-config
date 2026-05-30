@@ -12,6 +12,7 @@ chmod +x ${TARGET_DIR}/etc/init.d/S20jpm-cache
 chmod +x ${TARGET_DIR}/etc/init.d/S40iptables
 chmod +x ${TARGET_DIR}/etc/init.d/S45hostapd
 chmod +x ${TARGET_DIR}/etc/init.d/S50weston
+chmod +x ${TARGET_DIR}/etc/init.d/S30modemmanager
 
 # Ensure sudoers file has correct permissions
 chmod 440 ${TARGET_DIR}/etc/sudoers.d/jinaos
