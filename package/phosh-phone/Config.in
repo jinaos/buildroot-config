@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PHOSH_PHONE
+    bool "phosh-phone"
+    depends on BR2_PACKAGE_MODEM_MANAGER
+    help
+      Phone components for mobile Linux.
+      
+      This meta-package depends on the essential programs
+      needed for phone calls and SMS handling.
