@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Files
+Comment=Browse and manage files
+Exec=/usr/bin/pcmanfm
+Icon=system-file-manager
+Terminal=false
+Categories=System;FileManager;
+StartupNotify=true
