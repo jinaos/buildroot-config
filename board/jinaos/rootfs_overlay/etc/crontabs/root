@@ -1,0 +1,6 @@
+0 2 * * * /usr/bin/jpm clean 30
+0 3 * * 0 /usr/bin/jpm update
+*/30 * * * * /usr/bin/jpm cache-clean-tmp
+0 1 * * * /usr/bin/logrotate /etc/logrotate.conf
+*/15 * * * * /bin/ping -c 1
+mirror.jinaos.org > /dev/null 2>&1 || /usr/bin/jpm mirror-switch

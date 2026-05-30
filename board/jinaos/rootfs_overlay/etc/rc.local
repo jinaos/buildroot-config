@@ -1,0 +1,15 @@
+#!bin/sh
+
+touch /var/log/jpm.log
+chown jinaos:jinaos /var/log/jpm.log
+
+echo "performance" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE 2>/dev/null 2>&1
+iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT 2>/dev/null 2>&1
+iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT 2>/dev/null 2>&1
+
+echo 0 > /proc/sys/kernel/printk
+
+exit 0

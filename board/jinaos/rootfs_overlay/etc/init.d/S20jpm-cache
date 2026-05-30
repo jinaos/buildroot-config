@@ -1,0 +1,22 @@
+#!/bin/sh
+
+CACHE_DIR="/var/cache/jpm"
+
+case "$1" in
+	start)
+		echo "Setting up JPM cache directory at $CACHE_DIR"
+		mkdir -p "$CACHE_DIR"
+		chown jinaos:jinaos "$CACHE_DIR"
+		chmod 755 "$CACHE_DIR"
+		;;
+	stop)
+		echo "Cleaning up JPM cache directory at $CACHE_DIR"
+		rm -rf "$CACHE_DIR"
+		;;
+		restart)
+		$0 stop
+		$0 start
+		;;
+esac
+
+exit 0

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Terminal
+Name[ha]=Tashin Umurni
+Name[ig]=Terminal
+Name[yo]=Ibugbe Ise
+Comment=JinaOs command line
+Exec=/usr/bin/bash
+Icon=utilities-Terminal
+Terminal=true
+Categories=System;
+StartupNotify=true
+StartupWMClass=Terminal

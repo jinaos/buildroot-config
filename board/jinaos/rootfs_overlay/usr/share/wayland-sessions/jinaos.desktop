@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=JinaOs
+Comment=JinaOs Wayland Session
+Exec=/usr/bin/weston --config=/etc/weston.ini
+Type=Application

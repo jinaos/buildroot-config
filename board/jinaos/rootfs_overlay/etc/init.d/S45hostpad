@@ -1,0 +1,46 @@
+#!/bin/sh
+
+DAEMON=/usr/sbin/hostapd
+CONFIG=/etc/hostapd.conf
+PIDFILE=/var/run/hostapd.pid
+
+case "$1" in
+	start)
+		echo "Starting hostapd..."
+	    if [ -f $CONFIG ]; then
+	        start-stop-daemon --start --quiet --background --make-pidfile --pidfile $PIDFILE --exec $DAEMON -- -B -P $PIDFILE $CONFIG
+	        echo "hostapd started."
+	    else
+	        echo "Configuration file $CONFIG not found!
+			exit 1
+       fi
+	;;
+	stop)
+		echo "Stopping hostapd..."
+	    if [ -f $PIDFILE ]; then
+	        start-stop-daemon --stop --quiet --pidfile $PIDFILE
+	        rm -f $PIDFILE
+	        echo "hostapd stopped."
+	    else
+	        echo "hostapd is not running."
+	    fi
+		;;
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+	status)
+	    if [ -f $PIDFILE ]; then
+	        echo "hostapd is running."
+	    else
+	        echo "hostapd is not running."
+	    fi
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+exit 0

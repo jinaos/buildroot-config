@@ -1,0 +1,44 @@
+#!/bin/sh
+
+DAEMON=/usr/bin/weston
+CONFIG=/etc/weston.ini
+PIDFILE=/var/run/weston.pid
+
+case "$1" in
+	start)
+	    mkdir -p /tmp/runtime-jinaos
+	    chown jinaos:jinaos /tmp/runtime-jinaos
+		chmod 700 /tmp/runtime-jinaos
+		echo "Starting Weston..."
+		if [ -f $CONFIG ]; then
+			start-stop-daemon -S -q -m -p $PIDFILE --exec $DAEMON -b -- --config=$CONFIG --tty=1
+		else
+		 echo "No configuration file found at $CONFIG"
+		 exit 1
+		fi
+		;;
+	stop)
+		echo "Stopping Weston..."
+		start-stop-daemon -K -q -p $PIDFILE
+		rm -f $PIDFILE
+		;;
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+	status)
+	 if [ -f $PIDFILE ] && kill -0 $(cat $PIDFILE) 2>/dev/null; then
+		 echo "Weston is running with PID $(cat $PIDFILE)"
+		else
+		 echo "Weston is not running"
+		 exit 1
+		fi
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+exit 0

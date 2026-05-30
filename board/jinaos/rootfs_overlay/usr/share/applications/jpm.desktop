@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Jina Store
+Comment=JinaOs store install and remove apps
+Exec=/usr/bin/jpm-gui
+Icon=jpm
+Terminal=false
+Categories=System;Packagemanager
+StartupNotify=true
+NoDisplay=false
+X-JPM-Cache=/var/cache/jpm

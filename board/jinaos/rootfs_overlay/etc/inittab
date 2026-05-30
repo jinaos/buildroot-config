@@ -1,5 +1,5 @@
 ::sysinit:/etc/init.d/rcS
-::respawn:/usr/bin/weston --tty=1 --display=fb0
+::respawn:/sbin/lightdm
 ::ctrlaltdel:/sbin/reboot
 ::shutdown:/etc/init.d/rcK
 ::shutdown:/bin/umount -a -r

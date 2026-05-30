@@ -1,0 +1,26 @@
+#!/bin/sh
+
+export PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+export LANG="en_NG.UTF-8"
+export LC_ALL="en_NG.UTF-8"
+export PAGER=less
+export EDITOR=nano
+export HOME=/home/jinaos
+export USER=jinaos
+export PS1="\u@\h:\w\$ "
+
+
+alias ll='ls -la'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias jpm-install='jpm install'
+alias jpm-remove='jpm remove'
+alias jpm-update='jpm update'
+alias jpm-search='jpm search'
+alias jpm-list='jpm list'
+alias jpm-upgrade='jpm upgrade'
+alias jpm-clean='jpm clean'
+alias hotspot-on='sudo /etc/init.d/S45hostpad start'
+alias hotspot-off='sudo /etc/init.d/S45hostpad stop'
+
+umask 022

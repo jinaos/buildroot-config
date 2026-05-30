@@ -1,2 +1,4 @@
-%jinaos ALL=(ALL) NOPASSWD: /usr/bin/jpm
-%jinaos ALL=(ALL) NOPASSWD: /usr/bin/apk
+jinaos ALL=(ALL) NOPASSWD: /usr/bin/jpm
+jinaos ALL=(ALL) NOPASSWD: /usr/bin/jpm-gui
+jinaos ALL=(ALL) ALL
+jinaos ALL=(ALL) NOPASSWD: /etc/init.d/S45hostadp
